@@ -37,16 +37,16 @@ export function compterLesValeurs(main: Carte[]): Map<Valeur, number> {
   return occurrences;
 }
 
-function aUneValeurPresenteFois(main: Carte[], nombreDeFois: number): boolean {
+function uneValeurApparait(main: Carte[], nombreDeFois: number): boolean {
   return [...compterLesValeurs(main).values()].includes(nombreDeFois);
 }
 
 function estUnBrelan(main: Carte[]): boolean {
-  return aUneValeurPresenteFois(main, 3);
+  return uneValeurApparait(main, 3);
 }
 
 function estUnCarre(main: Carte[]): boolean {
-  return aUneValeurPresenteFois(main, 4);
+  return uneValeurApparait(main, 4);
 }
 
 function estUnFull(main: Carte[]): boolean {
